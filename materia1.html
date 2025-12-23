@@ -3,38 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matéria 1 - Educação Cristã | AVANCE</title>
+    <title>Módulo 1 - Educação Cristã | AVANCE</title>
     <style>
         :root { --azul-m:#001f3f; --azul-c:#0074D9; --br:#ffffff; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: var(--azul-m); }
-        .header { background-color: var(--azul-m); color: white; padding: 20px; text-align: center; border-bottom: 2px solid var(--azul-c); }
-        .container { max-width: 800px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        h1 { color: var(--azul-c); text-align: center; }
-        h2 { color: var(--azul-m); border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 30px; }
-        h3 { color: var(--azul-c); }
-        .intro { font-style: italic; color: #555; background: #eef6ff; padding: 15px; border-left: 5px solid var(--azul-c); margin-bottom: 20px; }
-        .footer { text-align: center; margin-top: 40px; padding: 20px; font-size: 0.9em; color: white; }
-        .btn-avalia { display: block; width: 80%; max-width: 300px; background: var(--azul-c); color: white; padding: 15px; text-decoration: none; border-radius: 30px; font-weight: bold; margin: 30px auto; text-align: center; border: none; cursor: pointer; font-size: 1.1rem; }
-        .btn-avalia:hover { background: #0056a3; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: var(--azul-m); padding-bottom: 50px; }
+        .header { background: var(--azul-m); color: white; padding: 20px; text-align: center; border-bottom: 2px solid var(--azul-c); }
+        .container { max-width: 800px; margin: 20px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .secao { display: none; }
+        .ativa { display: block; }
+        h2 { color: var(--azul-m); border-bottom: 2px solid var(--azul-c); padding-bottom: 5px; }
+        .pergunta { background: #f9f9f9; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--azul-c); text-align: left; }
+        .opcao { display: block; margin: 8px 0; cursor: pointer; padding: 8px; border-radius: 5px; transition: 0.2s; }
+        .opcao:hover { background: #eef6ff; }
+        .btn { display: block; width: 100%; max-width: 300px; background: var(--azul-c); color: white; padding: 15px; border-radius: 30px; font-weight: bold; margin: 20px auto; text-align: center; border: none; cursor: pointer; font-size: 1.1rem; }
+        #resultado { display: none; padding: 20px; border-radius: 10px; text-align: center; font-weight: bold; margin-top: 20px; font-size: 1.2rem; }
         p { text-align: justify; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>Curso Básico de Teologia</h1>
-    <p>Módulo 1 – Educação Cristã</p>
+    <h1>AVANCE</h1>
+    <p>Módulo 1: Educação Cristã</p>
 </div>
 
 <div class="container">
-    <div class="intro">
-        <strong>Introdução:</strong> A Educação Cristã é um processo contínuo de formação espiritual, fundamentado exclusivamente na revelação divina registrada nas Sagradas Escrituras. Ela não se limita à transmissão de informações religiosas, mas visa a transformação do caráter, da mente e da conduta do cristão à luz da Palavra de Deus.
+    <div id="leitura" class="secao ativa">
+        <h2>Matéria 1 – Educação Cristã</h2>
+        <p>A Educação Cristã é um processo contínuo de formação espiritual, fundamentado exclusivamente na revelação divina registrada nas Sagradas Escrituras...</p>
+        <p>A base encontra-se nos 66 livros da Bíblia (2 Timóteo 3:16-17). O Shemá (Deuteronômio 6:4-9) estabelece o ensino contínuo. A família é a primeira escola e Jesus Cristo o Mestre por excelência.</p>
+        <p>O objetivo final é a maturidade espiritual e conformidade com a imagem de Cristo.</p>
+        
+        <button class="btn" onclick="mudarPara('prova')">IR PARA AVALIAÇÃO</button>
     </div>
 
-    <h2>1. Fundamento Bíblico da Educação Cristã</h2>
-    <p>A base da Educação Cristã encontra-se nos 66 livros da Bíblia, inspirados por Deus e suficientes para ensinar, repreender, corrigir e instruir na justiça, conforme ensina o apóstolo Paulo em 2 Timóteo 3:16–17.</p>
+    <div id="prova" class="secao">
+        <h2>Avaliação de Conhecimento</h2>
+        <p style="text-align:center">Mínimo para aprovação: 7 acertos</p>
+        <form id="quizForm">
+            <div class="pergunta"><p>1. Base da Educação Cristã?</p>
+                <label class="opcao"><input type="radio" name="p1" value="1"> 66 livros da Bíblia</label>
+                <label class="opcao"><input type="radio" name="p1" value="0"> Filosofia humana</label></div>
+            <div class="pergunta"><p>2. O que é o Shemá?</p>
+                <label class="opcao"><input type="radio" name="p2" value="1"> Deuteronômio 6:4-9</label>
+                <label class="opcao"><input type="radio" name="p2" value="0"> Um mantra oriental</label></div>
+            <div class="pergunta"><p>3. V’Shinantam significa?</p>
+                <label class="opcao"><input type="radio" name="p3" value="1"> Ensinar diligentemente</label>
+                <label class="opcao"><input type="radio" name="p3" value="0"> Oração silenciosa</label></div>
+            <div class="pergunta"><p>4. Primeira instituição educacional?</p>
+                <label class="opcao"><input type="radio" name="p4" value="1"> A Família</label>
+                <label class="opcao"><input type="radio" name="p4" value="0"> O Estado</label></div>
+            <div class="pergunta"><p>5. Mestre por excelência?</p>
+                <label class="opcao"><input type="radio" name="p5" value="1"> Jesus Cristo</label>
+                <label class="opcao"><input type="radio" name="p5" value="0"> Sócrates</label></div>
+            <div class="pergunta"><p>6. Finalidade da Educação Cristã?</p>
+                <label class="opcao"><input type="radio" name="p6" value="1"> Maturidade espiritual</label>
+                <label class="opcao"><input type="radio" name="p6" value="0"> Apenas status</label></div>
+            <div class="pergunta"><p>7. 2 Timóteo 3:16-17 diz que a Bíblia é útil para?</p>
+                <label class="opcao"><input type="radio" name="p7" value="1"> Instruir na justiça</label>
+                <label class="opcao"><input type="radio" name="p7" value="0"> Fins poéticos</label></div>
+            <div class="pergunta"><p>8. Educação Cristã é um processo?</p>
+                <label class="opcao"><input type="radio" name="p8" value="1"> Contínuo por toda a vida</label>
+                <label class="opcao"><input type="radio" name="p8" value="0"> Temporário</label></div>
+            <div class="pergunta"><p>9. Provérbios 22:6 foca em?</p>
+                <label class="opcao"><input type="radio" name="p9" value="1"> Instruir a criança no caminho</label>
+                <label class="opcao"><input type="radio" name="p9" value="0"> Sabedoria financeira apenas</label></div>
+            <div class="pergunta"><p>10. Conhecimento sem transformação?</p>
+                <label class="opcao"><input type="radio" name="p10" value="1"> Não cumpre o propósito</label>
+                <label class="opcao"><input type="radio" name="p10" value="0"> É o objetivo final</label></div>
+        </form>
+        <button class="btn" onclick="corrigir()">CONCLUIR E AVANÇAR</button>
+    </div>
 
-    <h2>2. O Shemá e o Ensino Contínuo</h2>
+    <div id="resultado"></div>
+</div>
+
+<script>
+function mudarPara(id) {
+    document.querySelectorAll('.secao').forEach(s => s.classList.remove('ativa'));
+    document.getElementById(id).classList.add('ativa');
+    window.scrollTo(0,0);
+}
+
+function corrigir() {
+    const form = document.getElementById('quizForm');
+    let acertos = 0;
+    for(let i=1; i<=10; i++) {
+        const resp = form['p'+i].value;
+        if(resp === "1") acertos++;
+    }
+    
+    const resDiv = document.getElementById('resultado');
+    resDiv.style.display = "block";
+
+    if(acertos >= 7) {
+        resDiv.innerHTML = `<div style="color:green">APROVADO! Nota: ${acertos}/10.<br>Aguarde, liberando Matéria 2...</div>`;
+        setTimeout(() => { window.location.href = 'materia2.html'; }, 3000);
+    } else {
+        resDiv.innerHTML = `<div style="color:red">REPROVADO. Nota: ${acertos}/10.<br>Revise o texto e tente novamente.</div>`;
+    }
+}
+</script>
+
+</body>
+</html>    <h2>2. O Shemá e o Ensino Contínuo</h2>
     <p>Deuteronômio 6:4–9, conhecido como Shemá, estabelece um dos princípios mais importantes da educação cristã. Nesse texto, Deus ordena que Sua Palavra seja ensinada de forma contínua, intencional e aplicada à vida diária.</p>
 
     <h2>3. O Lar como Primeira Escola</h2>
