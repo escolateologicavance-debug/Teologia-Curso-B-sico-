@@ -8,16 +8,19 @@
         :root { --azul-m:#001f3f; --azul-c:#0074D9; --br:#ffffff; }
         body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: var(--azul-m); padding-bottom: 50px; }
         .header { background: var(--azul-m); color: white; padding: 20px; text-align: center; border-bottom: 2px solid var(--azul-c); }
-        .container { max-width: 800px; margin: 20px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .container { max-width: 800px; margin: 20px auto; background: white; padding: 35px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
         .secao { display: none; }
         .ativa { display: block; }
-        h2 { color: var(--azul-m); border-bottom: 2px solid var(--azul-c); padding-bottom: 5px; }
-        .pergunta { background: #f9f9f9; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--azul-c); text-align: left; }
-        .opcao { display: block; margin: 8px 0; cursor: pointer; padding: 8px; border-radius: 5px; transition: 0.2s; }
-        .opcao:hover { background: #eef6ff; }
-        .btn { display: block; width: 100%; max-width: 300px; background: var(--azul-c); color: white; padding: 15px; border-radius: 30px; font-weight: bold; margin: 20px auto; text-align: center; border: none; cursor: pointer; font-size: 1.1rem; }
-        #resultado { display: none; padding: 20px; border-radius: 10px; text-align: center; font-weight: bold; margin-top: 20px; font-size: 1.2rem; }
-        p { text-align: justify; }
+        h2 { color: var(--azul-m); border-bottom: 2px solid var(--azul-c); padding-bottom: 8px; margin-top: 30px; }
+        h3 { color: var(--azul-c); margin-top: 25px; }
+        .intro-box { font-style: italic; color: #444; background: #f0f7ff; padding: 20px; border-left: 6px solid var(--azul-c); margin-bottom: 25px; border-radius: 4px; }
+        .pergunta { background: #fdfdfd; padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #eee; border-left: 5px solid var(--azul-c); text-align: left; }
+        .opcao { display: block; margin: 10px 0; cursor: pointer; padding: 10px; border-radius: 8px; transition: 0.2s; background: #f4f4f4; }
+        .opcao:hover { background: #e2efff; }
+        .btn { display: block; width: 100%; max-width: 320px; background: var(--azul-c); color: white; padding: 18px; border-radius: 40px; font-weight: bold; margin: 30px auto; text-align: center; border: none; cursor: pointer; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .btn:hover { background: #005bb5; transform: scale(1.02); }
+        #resultado { display: none; padding: 25px; border-radius: 12px; text-align: center; font-weight: bold; margin-top: 25px; font-size: 1.3rem; }
+        p { text-align: justify; margin-bottom: 15px; }
     </style>
 </head>
 <body>
@@ -28,12 +31,137 @@
 </div>
 
 <div class="container">
+    
     <div id="leitura" class="secao ativa">
         <h2>Matéria 1 – Educação Cristã</h2>
-        <p>A Educação Cristã é um processo contínuo de formação espiritual, fundamentado exclusivamente na revelação divina registrada nas Sagradas Escrituras...</p>
-        <p>A base encontra-se nos 66 livros da Bíblia (2 Timóteo 3:16-17). O Shemá (Deuteronômio 6:4-9) estabelece o ensino contínuo. A família é a primeira escola e Jesus Cristo o Mestre por excelência.</p>
-        <p>O objetivo final é a maturidade espiritual e conformidade com a imagem de Cristo.</p>
+        <p>Curso Básico de Teologia</p>
+
+        <div class="intro-box">
+            <strong>Introdução</strong><br>
+            A Educação Cristã é um processo contínuo de formação espiritual, fundamentado exclusivamente na revelação divina registrada nas Sagradas Escrituras. Ela não se limita à transmissão de informações religiosas, mas visa a transformação do caráter, da mente e da conduta do cristão à luz da Palavra de Deus.
+            <br><br>
+            Dentro da teologia cristã protestante, a educação bíblica ocupa lugar central na formação do discípulo de Cristo, pois o verdadeiro conhecimento espiritual conduz à obediência, à maturidade e à vida transformada.
+        </div>
+
+        <h3>1. Fundamento Bíblico da Educação Cristã</h3>
+        <p>A base da Educação Cristã encontra-se nos 66 livros da Bíblia, inspirados por Deus e suficientes para ensinar, repreender, corrigir e instruir na justiça, conforme ensina o apóstolo Paulo em 2 Timóteo 3:16–17.</p>
+        <p>A educação bíblica não se fundamenta em tradições humanas, filosofias seculares ou sistemas pedagógicos autônomos, mas na revelação divina suficiente e autoritativa.</p>
+
+        <h3>2. O Shemá e o Ensino Contínuo</h3>
+        <p>Deuteronômio 6:4–9, conhecido como Shemá, estabelece um dos princípios mais importantes da educação cristã. Nesse texto, Deus ordena que Sua Palavra seja ensinada de forma contínua, intencional e aplicada à vida diária.</p>
+        <p>O termo hebraico V’Shinantam, traduzido como “ensinar diligentemente”, comunica a ideia de repetição, constância e profundidade no ensino da fé.</p>
+
+        <h3>3. O Lar como Primeira Escola</h3>
+        <p>A Bíblia apresenta a família como a primeira instituição educacional criada por Deus. Antes da existência de templos, seminários ou escolas formais, o ensino da fé ocorreria no ambiente familiar.</p>
+        <p>Provérbios 22:6 afirma: “Instrui o menino no caminho em que deve andar, e até quando envelhecer não se desviará dele”. Esse texto revela a responsabilidade primária dos pais na formação espiritual dos filhos.</p>
+
+        <h3>4. Jesus Cristo – O Mestre por Excelência</h3>
+        <p>Jesus Cristo é o maior modelo de educador cristão. Seu método de ensino não se limitava a discursos, mas envolvia convivência, exemplo, discipulado e prática.</p>
+        <p>Ele formava discípulos caminhando com eles, ensinando-os, corrigindo-os e enviando-os para praticar aquilo que aprenderam, demonstrando que a educação cristã verdadeira produz transformação de vida.</p>
+
+        <h3>5. Educação Cristã como Processo Contínuo</h3>
+        <p>A Educação Cristã não é um evento isolado, mas um processo contínuo que acompanha o cristão durante toda a sua vida. O crescimento espiritual ocorre à medida que o discípulo aprende, aplica e vive os princípios bíblicos.</p>
+        <p>Por essa razão, a educação bíblica não pode ser vista como opcional ou secundária, mas como elemento essencial da caminhada cristã.</p>
+
+        <h3>6. Finalidade da Educação Cristã</h3>
+        <p>O objetivo final da Educação Cristã não é apenas gerar conhecimento, mas conduzir o cristão à maturidade espiritual, à obediência à Palavra de Deus e à conformidade com a imagem de Cristo.</p>
+        <p>Conhecimento sem transformação não cumpre o propósito do ensino bíblico. A verdadeira educação cristã produz fé viva, caráter transformado e compromisso com o Evangelho.</p>
+
+        <p><i>Ao concluir esta matéria, o aluno estará apto a compreender os fundamentos bíblicos da Educação Cristã segundo a teologia protestante, baseada exclusivamente nos 66 livros das Escrituras.</i></p>
+
+        <button class="btn" onclick="irParaProva()">IR PARA AVALIAÇÃO</button>
+        <p style="text-align:center; font-size:0.8rem; color:#666;">© AVANCE – Gilberto Moreira</p>
+    </div>
+
+    <div id="prova" class="secao">
+        <h2>Avaliação: Educação Cristã</h2>
+        <p style="text-align:center">Responda as 10 questões abaixo. Mínimo para aprovação: 7 acertos.</p>
         
+        <form id="quizForm">
+            <div class="pergunta"><p><b>1. Qual a base da Educação Cristã?</b></p>
+                <label class="opcao"><input type="radio" name="p1" value="1"> Os 66 livros da Bíblia</label>
+                <label class="opcao"><input type="radio" name="p1" value="0"> Filosofias seculares</label></div>
+
+            <div class="pergunta"><p><b>2. 2 Timóteo 3:16-17 diz que a Bíblia é útil para:</b></p>
+                <label class="opcao"><input type="radio" name="p2" value="1"> Ensinar, repreender, corrigir e instruir</label>
+                <label class="opcao"><input type="radio" name="p2" value="0"> Apenas fins históricos</label></div>
+
+            <div class="pergunta"><p><b>3. O Shemá (Deut. 6:4-9) estabelece:</b></p>
+                <label class="opcao"><input type="radio" name="p3" value="1"> O princípio do ensino contínuo e intencional</label>
+                <label class="opcao"><input type="radio" name="p3" value="0"> Regras de alimentação</label></div>
+
+            <div class="pergunta"><p><b>4. V’Shinantam significa:</b></p>
+                <label class="opcao"><input type="radio" name="p4" value="1"> Ensinar diligentemente</label>
+                <label class="opcao"><input type="radio" name="p4" value="0"> Orar em silêncio</label></div>
+
+            <div class="pergunta"><p><b>5. Qual a primeira instituição educacional?</b></p>
+                <label class="opcao"><input type="radio" name="p5" value="1"> A Família (o Lar)</label>
+                <label class="opcao"><input type="radio" name="p5" value="0"> O Seminário</label></div>
+
+            <div class="pergunta"><p><b>6. Provérbios 22:6 revela a responsabilidade de:</b></p>
+                <label class="opcao"><input type="radio" name="p6" value="1"> Instruir a criança no caminho em que deve andar</label>
+                <label class="opcao"><input type="radio" name="p6" value="0"> Construir templos</label></div>
+
+            <div class="pergunta"><p><b>7. Jesus formava discípulos através de:</b></p>
+                <label class="opcao"><input type="radio" name="p7" value="1"> Convivência, exemplo e prática</label>
+                <label class="opcao"><input type="radio" name="p7" value="0"> Apenas discursos teóricos</label></div>
+
+            <div class="pergunta"><p><b>8. A Educação Cristã é um processo:</b></p>
+                <label class="opcao"><input type="radio" name="p8" value="1"> Contínuo por toda a vida</label>
+                <label class="opcao"><input type="radio" name="p8" value="0"> Que termina após o batismo</label></div>
+
+            <div class="pergunta"><p><b>9. Qual o objetivo final da Educação Cristã?</b></p>
+                <label class="opcao"><input type="radio" name="p9" value="1"> Maturidade espiritual e semelhança com Cristo</label>
+                <label class="opcao"><input type="radio" name="p9" value="0"> Acúmulo de títulos religiosos</label></div>
+
+            <div class="pergunta"><p><b>10. Conhecimento sem transformação:</b></p>
+                <label class="opcao"><input type="radio" name="p10" value="1"> Não cumpre o propósito do ensino bíblico</label>
+                <label class="opcao"><input type="radio" name="p10" value="0"> É o suficiente para o cristão</label></div>
+        </form>
+
+        <button class="btn" onclick="corrigir()">FINALIZAR E AVANÇAR</button>
+        <button onclick="mudarPara('leitura')" style="background:none; border:none; color:#666; cursor:pointer; display:block; margin:auto; text-decoration:underline;">Voltar para o Texto</button>
+    </div>
+
+    <div id="resultado"></div>
+</div>
+
+<script>
+function mudarPara(id) {
+    document.querySelectorAll('.secao').forEach(s => s.classList.remove('ativa'));
+    document.getElementById(id).classList.add('ativa');
+    window.scrollTo(0,0);
+}
+
+function irParaProva() {
+    mudarPara('prova');
+}
+
+function corrigir() {
+    const form = document.getElementById('quizForm');
+    let acertos = 0;
+    for(let i=1; i<=10; i++) {
+        const questao = form['p'+i];
+        if(questao && questao.value === "1") acertos++;
+    }
+
+    const resDiv = document.getElementById('resultado');
+    resDiv.style.display = "block";
+
+    if(acertos >= 7) {
+        resDiv.innerHTML = `<div style="background:#d4edda; color:#155724; padding:20px; border-radius:10px; border:1px solid #c3e6cb;">
+            APROVADO! Nota: ${acertos}/10.<br>Aguarde, liberando Módulo 2...</div>`;
+        setTimeout(() => { window.location.href = 'materia2.html'; }, 3500);
+    } else {
+        resDiv.innerHTML = `<div style="background:#f8d7da; color:#721c24; padding:20px; border-radius:10px; border:1px solid #f5c6cb;">
+            REPROVADO. Nota: ${acertos}/10.<br>Leia o texto novamente e tente outra vez.</div>`;
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+}
+</script>
+
+</body>
+</html>
         <button class="btn" onclick="mudarPara('prova')">IR PARA AVALIAÇÃO</button>
     </div>
 
