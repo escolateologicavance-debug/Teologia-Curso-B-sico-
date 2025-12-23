@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avaliação - Educação Cristã | AVANCE</title>
+<style>
+:root { --azul-m:#001f3f; --azul-c:#0074D9; --br:#ffffff; }
+body{ margin:0; font-family:'Segoe UI',Arial,sans-serif; background:var(--azul-m); color:var(--br); text-align:center; padding-bottom: 50px; }
+.container{ max-width:650px; margin:auto; padding:20px; }
+.pergunta { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: left; border-left: 4px solid var(--azul-c); }
+h3 { color: var(--azul-c); }
+.opcao { display: block; background: rgba(255,255,255,0.1); padding: 12px; margin: 8px 0; border-radius: 8px; cursor: pointer; transition: 0.3s; border: 1px solid transparent; }
+.opcao:hover { background: rgba(255,255,255,0.2); }
+input[type="radio"] { margin-right: 10px; cursor: pointer; }
+.selecionada { border-color: var(--azul-c); background: rgba(0, 116, 217, 0.2); }
+button{ width:85%; padding:18px; border:none; border-radius:35px; background:var(--azul-c); color:#fff; font-size:1.2rem; font-weight:bold; margin:20px 0; cursor:pointer; }
+#resultado { display: none; padding: 20px; border-radius: 15px; margin-top: 20px; font-weight: bold; }
+.sucesso { background: #2ecc71; color: #fff; }
+.erro { background: #e74c3c; color: #fff; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>AVANCE</h1>
+  <h3>Avaliação: Educação Cristã</h3>
+  <p>Responda com atenção. Mínimo para aprovação: 7 acertos.</p>
+
+  <form id="quizForm">
+    <div class="pergunta">
+      <p><b>1. Qual é o fundamento exclusivo da Educação Cristã?</b></p>
+      <label class="opcao"><input type="radio" name="p1" value="0"> Tradições humanas</label>
+      <label class="opcao"><input type="radio" name="p1" value="1"> As Sagradas Escrituras (66 livros)</label>
+      <label class="opcao"><input type="radio" name="p1" value="0"> Filosofias seculares</label>
+    </div>
+
+    <div class="pergunta">
+      <p><b>2. O texto de Deuteronômio 6:4-9 é conhecido como:</b></p>
+      <label class="opcao"><input type="radio" name="p2" value="1"> Shemá</label>
+      <label class="opcao"><input type="radio" name="p2" value="0"> Sermão da Montanha</label>
+      <label class="opcao"><input type="radio" name="p2" value="0"> Decálogo</label>
+    </div>
+
+    <div class="pergunta">
+      <p><b>3. O termo hebraico V’Shinantam comunica a ideia de:</b></p>
+      <label class="opcao"><input type="radio" name="p3" value="0"> Ensinar apenas aos domingos</label>
+      <label class="opcao"><input type="radio" name="p3" value="1"> Ensinar diligentemente, com repetição e constância</label>
+      <label class="opcao"><input type="radio" name="p3" value="0"> Estudo acadêmico secular</label>
+    </div>
+
+    <div class="pergunta">
+      <p><b>4. Segundo a Bíblia, qual é a primeira instituição educacional?</b></p>
+      <label class="opcao"><input type="radio" name="p4" value="0"> A Escola Dominical</label>
+      <label class="opcao"><input type="radio" name="p4" value="0"> O Seminário Teológico</label>
+      <label class="opcao"><input type="radio" name="p4" value="1"> O Lar (Família)</label>
+    </div>
+
+    <div class="pergunta">
+      <p><b>5. Quem é apresentado como o Mestre por excelência?</b></p>
+      <label class="opcao"><input type="radio" name="p5" value="1"> Jesus Cristo</label>
+      <label class="opcao"><input type="radio" name="p5" value="0"> O Apóstolo Paulo</label>
+      <label class="opcao"><input type="radio" name="p5" value="0"> Moisés</label>
+    </div>
+
+    <div class="pergunta">
+      <p><b>6. Qual o objetivo final da Educação Cristã?</b></p>
+      <label class="opcao"><input type="radio" name="p6" value="0"> Obter apenas conhecimento intelectual</label>
+      <label class="opcao"><input type="radio" name="p6" value="1"> Maturidade espiritual e conformidade com Cristo</label>
+      <label class="opcao"><input type="radio" name="p6" value="0"> Status religioso</label>
+    </div>
+
+    <div class="pergunta">
+      <p><b>7. Provérbios 22:6 trata sobre:</b></p>
+      <label class="opcao"><input type="radio" name="p7" value="1"> Instruir a criança no caminho em que deve andar</label>
+      <label class="opcao"><input type="radio" name="p7" value="0"> O dízimo e as ofertas</label>
+      <label class="opcao"><input type="radio" name="p7" value="0"> A construção do templo</label>
+    </div>
+
+    <div class="pergunta">
+      <p><b>8. A Educação Cristã é um evento isolado?</b></p>
+      <label class="opcao"><input type="radio" name="p8" value="0"> Sim, termina após o curso</label>
+      <label class="opcao"><input type="radio" name="p8" value="1"> Não, é um processo contínuo por toda a vida</label>
+    </div>
+
+    <div class="pergunta">
+      <p><b>9. 2 Timóteo 3:16-17 afirma que a Escritura é útil para:</b></p>
+      <label class="opcao"><input type="radio" name="p9" value="1"> Ensinar, repreender, corrigir e instruir na justiça</label>
+      <label class="opcao"><input type="radio" name="p9" value="0"> Apenas fins históricos</label>
+      <label class="opcao"><input type="radio" name="p9" value="0"> Substituir o bom senso</label>
+    </div>
+
+    <div class="pergunta">
+      <p><b>10. Conhecimento bíblico sem transformação de vida:</b></p>
+      <label class="opcao"><input type="radio" name="p10" value="0"> É o ideal da teologia</label>
+      <label class="opcao"><input type="radio" name="p10" value="1"> Não cumpre o propósito do ensino bíblico</label>
+      <label class="opcao"><input type="radio" name="p10" value="0"> É aceitável para o cristão</label>
+    </div>
+
+    <button type="button" onclick="corrigir()">CONCLUIR AVALIAÇÃO</button>
+  </form>
+
+  <div id="resultado"></div>
+  
+  <button onclick="window.location.href='index.html'" style="background: #555;">VOLTAR AO INÍCIO</button>
+
+  <p style="margin-top:30px; font-size: 0.8rem;">© AVANCE – Gilberto Moreira</p>
+</div>
+
+<script>
+function corrigir() {
+  const form = document.getElementById('quizForm');
+  const pontos = [
+    form.p1.value, form.p2.value, form.p3.value, form.p4.value, form.p5.value,
+    form.p6.value, form.p7.value, form.p8.value, form.p9.value, form.p10.value
+  ];
+  
+  let acertos = 0;
+  pontos.forEach(p => { if(p === "1") acertos++; });
+
+  const resDiv = document.getElementById('resultado');
+  resDiv.style.display = "block";
+
+  if(acertos >= 7) {
+    resDiv.className = "sucesso";
+    resDiv.innerHTML = "APROVADO! Você acertou " + acertos + " de 10. Parabéns!";
+  } else {
+    resDiv.className = "erro";
+    resDiv.innerHTML = "REPROVADO. Você acertou apenas " + acertos + ". Estude mais e tente novamente.";
+  }
+  window.scrollTo(0, document.body.scrollHeight);
+}
+</script>
+
+</body>
+</html>
